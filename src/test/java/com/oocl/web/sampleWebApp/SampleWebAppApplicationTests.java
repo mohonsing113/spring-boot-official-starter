@@ -33,12 +33,12 @@ public class SampleWebAppApplicationTests {
 	@Test
 	public void shouldReturnDefaultMessage() throws Exception {
 
-//		this.mockMvc.perform(post("/users/create")
-//				.contentType(MediaType.APPLICATION_JSON)
-//				.content("{ \"username\": \"string\" }")
-//				)
-//				.andExpect(status().isCreated())
-//				.andExpect(header().string("Location", containsString("/users/string")));
+		this.mockMvc.perform(post("/users")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content("{ \"username\": \"string\" }")
+				)
+				.andExpect(status().isCreated())
+				.andExpect(header().string("Location", containsString("/users/string")));
 	}
 
 }

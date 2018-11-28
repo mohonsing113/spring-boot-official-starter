@@ -10,7 +10,7 @@ public class HelloController {
 
     private final Logger log = Logger.getLogger(this.getClass().getName());
 
-    @RequestMapping(value = "/", method =RequestMethod.POST)
+    @RequestMapping(value = "", method =RequestMethod.POST)
     public ResponseEntity<String> create(@RequestBody User user) {
         return ResponseEntity.created(URI.create("/users/"+user.getUsername())).body("created");
     }
